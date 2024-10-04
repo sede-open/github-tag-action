@@ -14,6 +14,7 @@ import {
 } from './utils';
 import { createTag } from './github';
 import { Await } from './ts';
+import _ from 'lodash';
 
 export default async function main() {
   const defaultBump = core.getInput('default_bump') as ReleaseType | 'false';
@@ -67,7 +68,8 @@ export default async function main() {
     appendToPreReleaseTag ? appendToPreReleaseTag : currentBranch
   ).replace(/[^a-zA-Z0-9-]/g, '-');
 
-  const prefixRegex = new RegExp(`^${tagPrefix}`);
+  const safeTagPrefix = _.escapeRegExp(tagPrefix);
+  const prefixRegex = new RegExp(`^${safeTagPrefix}`);
 
   const validTags = await getValidTags(
     prefixRegex,
