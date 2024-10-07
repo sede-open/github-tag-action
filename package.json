@@ -29,6 +29,7 @@
     "@actions/github": "^4.0.0",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/release-notes-generator": "^9.0.1",
+    "@types/lodash": "^4.17.5",
     "conventional-changelog-conventionalcommits": "^4.6.1",
     "lodash": "^4.17.21",
     "semver": "^7.3.5"
@@ -37,7 +38,6 @@
     "@octokit/rest": "^18.12.0",
     "@types/jest": "^27.0.2",
     "@types/js-yaml": "^4.0.4",
-    "@types/lodash": "^4.17.10",
     "@types/node": "^20.11.16",
     "@types/semver": "^7.3.9",
     "jest": "^27.3.1",
